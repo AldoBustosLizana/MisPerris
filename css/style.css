@@ -288,4 +288,146 @@ footer .social a {
 	}
 
 
+    *{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial;
+    background: white;
+
+}
+
+#container{
+    width: 100%;
+}
+
+#InicioLogo{
+    width: 100%;
+    height: 80px;
+    background-color:rgb(16, 238, 190);
+    color:white;
+}
+
+
+
+.logoperris{
+    width: 100%;
+    height: 80px;
+    color:white;
+}
+
+.menu{
+    position: relative;
+    left:500px;
+    width:50%;
+    list-style: none;
+    margin:0;
+    padding:0;
+    display:inline-block;
+    font-size: 20px;
+
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu li a{
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.menu li a:hover{
+    background: darkcyan;
+}
+
+#segundologo{
+    color:white;
+    height: 600px;
+    background-color:#4aa881;
+    width: 96.9%;
+    display:inline-block;
+    text-decoration:none;
+    padding:20px 30px;
+    list-style: none;
+}
+
+img.perro{
+    width: 1400px;
+    height: 500px;
+    padding-left: 20%;
+    padding: 40px;
+    border: 2px;
+    margin:auto;
+}
+
+.enlaces{
+    text-decoration:none;
+    color:white;
+}
+
+.ColorB1{
+    position:relative;
+    color: white;
+    display: inline-block;
+    float: left;
+    top:20px;
+
+
+}
+.ColorB2{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: "calibri";
+    display: inline-block;
+    float:inherit;
+
+}
+
+.space{
+      display: inline-block;
+      float:right;
+      position: relative;
+      top: -30px;
+  }
+
+
+#contenido{
+    color:black;
+    height: 600px;
+    font-family: Arial;
+    width: 100%;
+}
+
+.contenido1{
+    position: relative;
+    right:50%;
+    top:20px;
+    direction: rtl;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.contenido2{
+    position:relative;
+    left:50%;
+    top:-350px;
+    font-size:20px;
+
+}
+
+footer{
+    width: 100%;
+    height: 30px;
+    background: #4aa881;
+}
+
+
+
+
+
+
 }
