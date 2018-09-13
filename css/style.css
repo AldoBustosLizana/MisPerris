@@ -20,12 +20,6 @@ img.perro {
     justify-content: center;
 }
 
-.segundolocoperris {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 50px;
-}
 
 #franjaInferior{
     width: 100%;
@@ -33,6 +27,38 @@ img.perro {
 
     display: flex;
     justify-content: space-between;
+}
+
+#myCarousel {
+    background-color: #6dccaa;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.carousel{
+  width:100%;
+  height: 300px;
+  justify-content: center;
+}
+
+.item{
+  height:100%;
+  width:80%;
+  justify-content: center;
+}
+
+.item img{
+  width:80%;
+  height:100%;
 }
 
 .numero {
@@ -56,18 +82,14 @@ img.perro {
 	display: -ms-flex;
     display: -webkit-flex;
     display: flex;
+    justify-content: center;
 }
 
 .contenedor > div{
     width: 50%;
     padding: 10px;
     background: white;
-}
-
-.contenedor > div{
-    width: 50%;
-    padding: 10px;
-    background: white;
+    justify-content: center;
 }
 
 .contenedor > div:first-child {
@@ -115,6 +137,7 @@ body {
 header {
     background-color:#85d4b7;
     width:100%;
+    padding-bottom: 20px;
 
 	/* Flexbox */
 	display: flex;
