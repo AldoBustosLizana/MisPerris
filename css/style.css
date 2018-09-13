@@ -4,6 +4,31 @@
 	box-sizing: border-box;
 }
 
+#formulario {
+    display: flex;
+    justify-content: center;
+    background: #6dccaa;
+    font-family: Calibri, Verdana;
+}
+
+#formulario table {
+    width: 600px;
+    background: rgb(1,1,1,0.2);
+
+}
+
+#formulario th{
+    text-align: center;
+    font-size: 20pt;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#formulario td {
+    padding-bottom: 9px;
+}
+
+
 a {
     font-family: Calibri;
 }
@@ -311,10 +336,10 @@ footer .social a {
 	}
 
 
-    *{
-    margin:0;
-    padding: 0;
+#formulario tabla1 {
+    background: black;
 }
+
 
 body{
     font-family: Arial;
@@ -447,10 +472,5 @@ footer{
     height: 30px;
     background: #4aa881;
 }
-
-
-
-
-
 
 }
