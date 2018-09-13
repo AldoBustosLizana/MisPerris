@@ -28,14 +28,19 @@ img.perro {
 #franjaInferior{
     width: 100%;
     background-color: #6dccaa;
-
     display: flex;
     justify-content: space-between;
 }
 
-contenedor3{
-        background :#6dccaa;
+.contenedor3{
+        background-color:#6dccaa;
+    width: 100%;
+    height: 60%;
     }
+
+#Collageperros{
+    background: #6dccaa;
+}
 
 #myCarousel {
     background-color: #6dccaa;
