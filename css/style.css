@@ -37,6 +37,10 @@ img.perro {
     width: 80%;
 }
 
+.nav a:hover{
+     background: darkcyan;
+}
+
 #segundologo{
     width: 100%;
     background-color: #6dccaa;
