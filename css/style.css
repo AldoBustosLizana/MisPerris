@@ -37,7 +37,7 @@ img.perro {
     width: 80%;
 }
 
-.nav a:hover{
+nav a:hover{
      background: darkcyan;
 }
 
@@ -451,8 +451,9 @@ img.perro{
 .space{
       display: inline-block;
       float:right;
-      position: relative;
-      top: -30px;
+      list-style: none;
+
+
   }
 
 
