@@ -33,6 +33,10 @@ img.perro {
     justify-content: space-between;
 }
 
+contenedor3{
+        background :#6dccaa;
+    }
+
 #myCarousel {
     background-color: #6dccaa;
     display: flex;
@@ -451,6 +455,8 @@ footer{
     height: 30px;
     background: #4aa881;
 }
+
+
 
 
 
