@@ -175,7 +175,8 @@ body {
 header {
     background-color:#85d4b7;
     width:100%;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+    overflow:hidden;
 
 	/* Flexbox */
 	display: flex;
@@ -185,10 +186,18 @@ header {
 	flex-direction:row;
 	flex-wrap:nowrap;
 }
+.centrado{
+    width:90%; /* Establecemos que el ancho sera del 90% */
+	max-width:1000px; /* Aqui le decimos que el ancho máximo sera de 1000px */
+	margin:auto; /* Centramos los elementos */
+	overflow:hidden; /* Eliminamos errores de float */
+}
 
 header .logo {
 	color:#fff;
     padding-top: 20px;
+	line-height: 50px;
+	float:left;
 }
 
 header .logo img {
@@ -203,8 +212,8 @@ header .logo a {
 }
 
 header nav {
-	width:80%;
-    padding-top: 14px;
+    float:right;
+	line-height: 50px;
     align-content: space-between;
 
 	/* Flexbox */
@@ -223,10 +232,14 @@ header nav a {
 
 	/* Flexbox */
 	flex-grow:1;
+    -webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
 }
 
 header nav a:hover {
 	color:seagreen;
+    border-radius:90px;
 }
 
 .main {
@@ -311,7 +324,7 @@ footer .social a {
 	display: inline-block;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
 	.contenedor {
 		flex-direction:column;
 	}
@@ -327,6 +340,11 @@ footer .social a {
 
 	header nav {
 		width: 100%;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        width: 100px;
+        display: none;
 
 	}
 
