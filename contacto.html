@@ -51,28 +51,28 @@
         </tr>
         <tr>
             <td align="right" >Rut:</td>
-            <td align="center" colspan="2"><input type="text" id="rut" required style="width: 80%" maxlength="10"></td>
+            <td align="center" colspan="2"><input type="text" id="rut" required style="width: 80%" maxlength="8" onkeypress="return validarNumeros(event)"></td>
             <td align="center" colspan="2"><input type="text" id="rut2" required style="width: 10%" maxlength="1" onblur="validarRut(rut, rut2)"></td>
         </tr>
         <tr>
             <td align="right" >Nombre:</td>
-            <td align="center" colspan="2"><input type="text" required style="width: 80%"></td>
+            <td align="center" colspan="2"><input type="text" maxlength="30" required style="width: 80%" onkeypress="return validarLetrasConEspacio(event)"></td>
         </tr>
         <tr>
             <td align="right" >Apellidos:</td>
-            <td align="center" colspan="2"><input type="text" required style="width: 80%"></td>
+            <td align="center" colspan="2"><input type="text" maxlength="30" required style="width: 80%" onkeypress="return validarLetrasConEspacio(event)"></td>
         </tr>
         <tr>
             <td align="right" >F. de Nacimiento:</td>
-            <td align="center" colspan="2"><input type="date" max="2001-12-31" value="2001-12-31" autocomplete="on" style="width: 80%" required></td>
+            <td align="center" colspan="2"><input type="date" name="feNacimiento" max="2001-12-31" value="2001-12-31" autocomplete="on" style="width: 80%" onblur="validarAnno(feNacimiento)" required></td>
         </tr>
          <tr>
             <td align="right" >Teléfono:</td>
-            <td align="center" colspan="2"><input type="text" style="width: 80%" maxlength="9"></td>
+            <td align="center" colspan="2"><input type="text" style="width: 80%" maxlength="9" onkeypress="return validarNumeros(event)"></td>
         </tr>
         <tr>
             <td align="right" >Correo:</td>
-            <td align="center" colspan="2"><input type="email" style="width: 80%" required></td>
+            <td align="center" colspan="2"><input type="email" maxlength="50" style="width: 80%" required></td>
         </tr>
         <tr>
             <td align="right">Región:</td>

@@ -1,3 +1,13 @@
+function validarAnno (fechIngresada){
+    fecha = fechIngresada.value;
+    annoIngresado = fecha.substr(0, 4);
+
+    if (annoIngresado > 2001 ){
+        alert("Debes haber nacido antes del 2001 para poder registrar tus datos.");
+    }
+
+}
+
 function validarRut ( nro, dv )
 {
 
@@ -43,7 +53,7 @@ function validarRut ( nro, dv )
 
     if(digito==dig)
     {
-        alert("Rut Correcto!!!");
+        //alert("Rut Correcto!!!");
     }
     else
     {
@@ -51,4 +61,34 @@ function validarRut ( nro, dv )
         return false;
     }
 
+}
+
+//Función para Validar Letras + Espacio + Retroceso
+function validarLetrasConEspacio(e){
+    tecla = (document.all) ? e.keyCode : e.which;
+
+    //Permitimos tecla de retroceso.
+    if (tecla==8){
+        return true;
+    }
+
+    //Patrón de carácteres permitidos. Sólo letras + barra espaciadora.
+    patron =/^[a-zA-Z\s]*$/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
+}
+
+//Función para Validar Números + Retroceso
+function validarNumeros(e){
+    tecla = (document.all) ? e.keyCode : e.which;
+
+    //Permitimos tecla de retroceso.
+    if (tecla==8){
+        return true;
+    }
+
+    //Patrón de carácteres permitidos. Sólo letras + barra espaciadora.
+    patron =/[0-9]/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
 }
