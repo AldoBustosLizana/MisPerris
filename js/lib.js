@@ -92,3 +92,13 @@ function validarNumeros(e){
     tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
 }
+
+//Funcion para mostrar menu desplegable
+function muestraMenu(){
+
+    var btnMenu = document.getElementById('logo2');
+    var nav = document.getElementById('menuDesplegable');
+    btnMenu.addEventListener('click', function(){
+    nav.classList.toggle('mostrar');
+})
+}
