@@ -6,7 +6,14 @@
 }
 
 body {
+    margin: 0;
     background: black;
+}
+
+
+.main {
+    padding-top: 3rem;
+    background: #bbbbbb;
 }
 
 /* Encabezado */
@@ -17,6 +24,11 @@ body {
     top: 0;
     right: 0;
     z-index: 1001;
+}
+
+nav a:hover{
+     background: #89ECD1;
+    border-radius: 50px;
 }
 
 a {
@@ -58,12 +70,13 @@ a {
     border-radius: 5px;
 }
 
+/* Carrusel y contenidos */
 #catalogoImagenes {
     display: flex;
     justify-content: center;
     position: relative;
     padding-top: 25px;
-    padding-bottom: 1rem;
+    padding-bottom: 0px;
     background: white;
 }
 
@@ -84,10 +97,6 @@ a {
     height: 10px;
 }
 
-.main {
-    padding-top: 3rem;
-    background: #bbbbbb;
-}
 
 /* Barra con información */
 .franjaInferior{
@@ -153,65 +162,138 @@ a {
     width: 20%;
 }
 
-/* Parte más inferior (Collage Fotos)*/
-.contenedor3 {
-    background: #85d4b7;
-    height: 400px;
-    padding: 1%;
+
+/* Para Tabla del collage y contenido*/
+#tablaCollage {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    background: #85d4b7;
+    padding: 10px;
 }
 
-.CollagePerros img{
-    width: 150px;
-    height: 150px;
-    padding: 1%;
-    border-color: black;
+#tablaCollage .item_collage{
+    height: auto;
+    width: auto;
+    display: inline-flex;
+    justify-content: center;
+    padding: 10px;
 }
 
+#tablaCollage img{
+    cursor: pointer;
+}
 
+.arriba img{
+    width: 185px;
+    height: 125px;
+}
 
-/* Estilos para contacto.html*/
-#formulario {
+.abajo img{
+    width: 145px;
+    height: 185px;
+}
+
+/* MODAL PARA BOTON */
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+    padding: 20px;
+
     display: flex;
     justify-content: center;
-    background: #6dccaa;
-    font-family: Calibri, Verdana;
+    align-items: center;
 }
 
-#formulario table {
-    width: 600px;
-    background: rgb(1,1,1,0.2);
+.modal__img {
+    height: 100%;
 }
 
-#formulario th{
+.modal__boton {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: monospace;
+    line-height: 50px;
     text-align: center;
-    font-size: 20pt;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para página contacto.html*/
+#formulario {
+    background: white;
+    font-family: Calibri, Verdana;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px;
+    padding-left: 15%;
+}
+
+#formulario h3{
+    font-family: fantasy;
+    padding-left: 23%
+}
+
+#tablaFormulario{
+    font-family: Calibri, Verdana;
+    font-size: 18px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    width: 80%;
+    background: rgb(0,0,0,0.2);
+    border-radius: 30px;
 }
 
-#formulario td {
-    padding-bottom: 9px;
+#tablaFormulario td{
+    padding: 15px;
 }
 
-
-.header2{
-    position: fixed;
-    height: 100px;
-}
-.header2 .logo{
-    line-height: 100px;
-    font-size: 30px;
-
+.opcionCasa{
+    width: 15px;
+    text-align: center
 }
 
-
-nav a:hover{
-     background: #89ECD1;
-    border-radius: 50px;
+.columna1{
+    text-align: right;
 }
 
+.columna2 {
+    align-content: center;
+}
+
+#rut {
+    width: 162px;
+}
+
+#rut2 {
+    width: 28px;
+}
+
+.columna2 input{
+    width: 200px;
+}
+
+.columna2 select{
+    width: 200px;
+}
+
+#botonEnviar{
+    text-align: center;
+}
+
+#botonEnviar button{
+    width: 104px;
+}
 
 /* Pie de Página */
 footer {
@@ -336,6 +418,15 @@ footer h3{
         text-align: justify;
     }
 
+    #formulario {
+    background: white;
+    font-family: Calibri, Verdana;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 40px;
+    padding-left: 5%
+}
 
 }
 

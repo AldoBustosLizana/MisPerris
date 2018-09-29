@@ -11,10 +11,12 @@
     <!-- Otros estilos -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- JavaScript's -->
     <script language="JavaScript" type="text/javascript" src="js/lib.js"></script>
+
     <script src="js/jquery-3.3.1.js"></script>
 
     <!-- Icono título de la página + Título-->
@@ -139,23 +141,47 @@
         </div>
 
         <!-- Collage -->
-        <div class="Contenido contenedor3">
-             <div class="CollagePerros">
-              <img src="imagenes/rescatados/Bigotes_tn.jpg">
-              <img src="imagenes/rescatados/Chocolate_tn.jpg">
-              <img src="imagenes/rescatados/Luna_tn.jpg">
-              <img src="imagenes/rescatados/Maya_tn.jpg">
-              <img src="imagenes/rescatados/Oso_tn.jpg">
-              <img src="imagenes/rescatados/Pexel_tn.jpg">
-              <img src="imagenes/rescatados/Wifi_tn.jpg">
-             </div>
-         </div>
+
+
+        <table class="Contenido" id="tablaCollage">
+            <tr>
+                <td class="item_collage arriba"><img src="imagenes/rescatados/Oso_tn.jpg" alt="Oso" class="collage__img"/></td>
+                <td class="item_collage arriba"><img src="imagenes/rescatados/Wifi_tn.jpg"/></td>
+                <td class="item_collage arriba"><img src="imagenes/rescatados/Luna_tn.jpg"/></td>
+                <td class="item_collage arriba"><img src="imagenes/rescatados/Maya_tn.jpg"/></td>
+            </tr>
+        </table>
+
+        <table class="Contenido" id="tablaCollage">
+            <tr>
+                <td class="item_collage abajo"><img src="imagenes/rescatados/Bigotes_tn.jpg" class="collage__img" id="1"/></td>
+                <td class="item_collage abajo"><img src="imagenes/rescatados/Pexel_tn.jpg" class="collage_img"/></td>
+                <td class="item_collage abajo"><img src="imagenes/rescatados/Chocolate_tn.jpg" alt="Chocolate" class="collage_img"/></td>
+            </tr>
+        </table>
+
+<script src="js/modal.js"></script>
+
+        <!-- <ul class="Contenido contenedor3">
+            <li class="item_collage"><img src="imagenes/rescatados/Bigotes_tn.jpg" class="imagen_collage" id="1"></li>
+            <li class="item_collage"><img src="imagenes/rescatados/Chocolate_tn.jpg" class="imagen_collage" id="2"></li>
+            <li class="item_collage"><img src="imagenes/rescatados/Luna_tn.jpg" class="imagen_collage" id="3"></li>
+            <li class="item_collage"><img src="imagenes/rescatados/Maya_tn.jpg" class="imagen_collage" id="4"></li>
+            <li class="item_collage"><img src="imagenes/rescatados/Oso_tn.jpg" class="imagen_collage" id="5"></li>
+            <li class="item_collage"><img src="imagenes/rescatados/Pexel_tn.jpg" class="imagen_collage" id="6"></li>
+            <li class="item_collage"><img src="imagenes/rescatados/Wifi_tn.jpg" class="imagen_collage" id="7"></li>
+        </ul>-->
+
+
     </main>
+
 
     <!-- Pie de Página -->
     <footer>
         <h3>Desarrollo web y móvil</h3>
     </footer>
+
+
 
     </body>
 </html>
