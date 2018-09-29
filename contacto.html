@@ -13,16 +13,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- Validaciones con JavaScript -->
+    <!-- JavaScript's -->
     <script language="JavaScript" type="text/javascript" src="js/lib.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/chile.js"></script>
 
+    <!-- Icono título de la página + Título-->
+    <link rel="shortcut icon" href="iconos/perrito.png">
     <title>Mis Perris - Contacto</title>
 
 </head>
-
 <body>
-
-    <div id="Contenedor">
 
     <!-- Encabezado -->
     <header class="header">
@@ -30,9 +31,10 @@
         <!-- Logo Empresa -->
         <div class="Contenido contenedor-logo" >
             <a href="#" class="logo"><img src="imagenes/logo.png" height="35px"></a>
+            <a id="logo2" class="logo2" onclick="muestraMenu();"><img src="iconos/appbar.list.png"></a>
 
             <!-- Menu Principal -->
-            <nav class="opcionesEncabezados">
+            <nav id="menuDesplegable" class="opcionesEncabezados">
                 <ul>
                     <li><a href="index.html"><img src="iconos/home.png">INICIO</a></li>
                     <li><a href="#"><img src="iconos/grupo.png">QUIENES SOMOS</a></li>
@@ -43,93 +45,107 @@
         </div>
     </header>
 
-        <div id="formulario" class="formContacto">
+    <hr>
+
+    <!-- Cuerpo de la página -->
+    <main class="main">
+
+        <div id="formulario">
 
             <form id="form1" name="form1" method="post" action="">
-            <table align="center" id="tabla1">
-        <tr>
-            <th colspan="3"><strong>Ingrese los datos del registros</strong></th>
-        </tr>
-        <tr>
-        <td>
-        <p/>
-        </td>
-        </tr>
-        <tr>
-            <td align="right" >Rut:</td>
-            <td align="center" colspan="2"><input type="text" id="rut" required style="width: 80%" maxlength="8" onkeypress="return validarNumeros(event)">
-            <input type="text" id="rut2" required style="width: 10%" maxlength="1" onblur="validarRut(rut, rut2)"></td>
-        </tr>
-        <tr>
-            <td align="right" >Nombre:</td>
-            <td align="center" colspan="2"><input type="text" maxlength="30" required style="width: 80%" onkeypress="return validarLetrasConEspacio(event)"></td>
-        </tr>
-        <tr>
-            <td align="right" >Apellidos:</td>
-            <td align="center" colspan="2"><input type="text" maxlength="30" required style="width: 80%" onkeypress="return validarLetrasConEspacio(event)"></td>
-        </tr>
-        <tr>
-            <td align="right" >F. de Nacimiento:</td>
-            <td align="center" colspan="2"><input type="date" name="feNacimiento" max="2001-12-31" value="2001-12-31" autocomplete="on" style="width: 80%" onblur="validarAnno(feNacimiento)" required></td>
-        </tr>
-         <tr>
-            <td align="right" >Teléfono:</td>
-            <td align="center" colspan="2"><input type="text" style="width: 80%" maxlength="9" onkeypress="return validarNumeros(event)"></td>
-        </tr>
-        <tr>
-            <td align="right" >Correo:</td>
-            <td align="center" colspan="2"><input type="email" maxlength="50" style="width: 80%" required></td>
-        </tr>
-        <tr>
-            <td align="right">Región:</td>
-            <td align="center" colspan="2">
-                <select style="width: 80%">
-                    <option value="RI">REGION I</option>
-                    <option value="RII">REGION II</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td align="right">Ciudad:</td>
-            <td align="center" colspan="2">
-                <select style="width: 80%">
-                    <option value="CI">COMUNA I</option>
-                    <option value="CII">COMUNA II</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td align="right">Tipo Vivienda:</td>
-            <td align="center"><label>
-                <input type="radio" class="radio" value="1" name="casaPatioGrande">Casa Patio Grande
-                </label>
-            </td>
-            <td align="center"><label>
-                <input type="radio" class="radio" value="1" name="casaPatioChico">Casa Patio Pequeño
-                </label>
-            </td>
-        </tr>
-        <tr>
-        <td></td>
-            <td align="center"><label>
-                <input type="radio" class="radio" value="1" name="casaSinPatio">Casa Sin Patio
-                </label>
-            </td>
-            <td align="center"><label>
-                <input type="radio" class="radio" value="1" name="depto">Departamento
-                </label>
-            </td>
-        </tr>
-        <tr><p/></tr>
-        <tr>
-            <td colspan="3" align="center">
-                <button>Enviar Solicitud</button>
-            </td>
-        </tr>
-        <p/>
-    </table>
+
+                <h3>Formulario de Contacto</h3>
+
+                <table id="tablaFormulario">
+                    <tr id="rut">
+                        <td class="columna1">R.U.N. :</td>
+                        <td class="columna2">
+                            <input type="text" id="rut" required maxlength="8" onkeypress="return validarNumeros(event)">-
+                            <input type="text" id="rut2" required maxlength="1" onblur="validarRut(rut, rut2)"></td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Nombre:</td>
+                        <td class="columna2">
+                            <input type="text" id="nombre" maxlength="30" required onkeypress="return validarLetrasConEspacio(event)"></td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Apellidos:</td>
+                        <td class="columna2">
+                            <input type="text" id="apellidos" maxlength="50" required onkeypress="return validarLetrasConEspacio(event)"></td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Fecha de Nacimiento:</td>
+                        <td class="columna2">
+                            <input type="date" id="fechaNacimiento" maxlength="50" required max="2001-12-31" value="2001-12-31" autocomplete="on" onblur="validarAnno(fechaNacimiento)"></td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Teléfono</td>
+                        <td class="columna2">
+                            <input type="text" id="telefono" maxlength="30" required onkeypress="return validarNumeros(event)" maxlength="9"></td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Correo:</td>
+                        <td class="columna2">
+                            <input type="email" id="correo" maxlength="50" required></td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Ciudad:</td>
+                        <td class="columna2">
+                           <select id="regiones"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Comuna:</td>
+                        <td class="columna2">
+                           <select id="comunas"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Tipo Vivienda:</td>
+                        <td class="columna2 opcionCasa">
+                            <label>
+                            <input type="radio" name="radio" id="1">Casa Patio Grande
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="columna2 opcionCasa">
+                            <label>
+                            <input type="radio" name="radio" id="2">Casa Patio Pequeño
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="columna2 opcionCasa">
+                            <label>
+                            <input type="radio" name="radio" id="3">Casa Sin Patio
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="columna2 opcionCasa">
+                            <label>
+                            <input type="radio" name="radio" id="4">Departamento
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="botonEnviar" colspan="3">
+                           <button>Enviar</button>
+                        </td>
+                    </tr>
+                </table>
             </form>
-            </div>
-    </div>
+        </div>
+    </main>
+
+        <!-- Pie de Página -->
+    <footer>
+        <h3>Desarrollo web y móvil</h3>
+    </footer>
+
 </body>
 </html>
