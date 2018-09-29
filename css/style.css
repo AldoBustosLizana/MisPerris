@@ -382,6 +382,9 @@ footer h3{
         list-style: none;
     }
 
+    .space li{
+        list-style:none;
+    }
     #contenedor2 {
         display: block;
     }
