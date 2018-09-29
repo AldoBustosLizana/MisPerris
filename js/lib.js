@@ -5,7 +5,6 @@ function validarAnno (fechIngresada){
     if (annoIngresado > 2001 ){
         alert("Debes haber nacido antes del 2001 para poder registrar tus datos.");
     }
-
 }
 
 function validarRut ( nro, dv )
