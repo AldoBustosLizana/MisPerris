@@ -118,6 +118,10 @@ a {
     padding-top: 15px;
 }
 
+.franjaInferior li{
+    list-style: none;
+}
+
 /* Contenido bajo la barra de información */
 #contenedor2 {
 	display: -ms-flex;

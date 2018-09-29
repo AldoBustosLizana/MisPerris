@@ -93,6 +93,21 @@ function validarNumeros(e){
     return patron.test(tecla_final);
 }
 
+//Función para Validar Números + Retroceso
+function validarDigito(e){
+    tecla = (document.all) ? e.keyCode : e.which;
+
+    //Permitimos tecla de retroceso.
+    if (tecla==8){
+        return true;
+    }
+
+    //Patrón de carácteres permitidos. Sólo letras + barra espaciadora.
+    patron =/[0-9kK]/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
+}
+
 //Funcion para mostrar menu desplegable
 function muestraMenu(){
 
