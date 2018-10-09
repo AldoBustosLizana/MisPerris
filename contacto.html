@@ -61,7 +61,7 @@
                         <td class="columna1">R.U.N. :</td>
                         <td class="columna2">
                             <input type="text" id="rut" required maxlength="8" onkeypress="return validarNumeros(event)">-
-                            <input type="text" id="rut2" required maxlength="1" onblur="validarRut(rut, rut2)"></td>
+                            <input type="text" id="rut2" required maxlength="1" onkeypress="return validarDigito(event)" onblur="validarRut(rut, rut2)"></td>
                     </tr>
                     <tr>
                         <td class="columna1">Nombre:</td>

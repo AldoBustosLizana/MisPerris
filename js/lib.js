@@ -5,7 +5,6 @@ function validarAnno (fechIngresada){
     if (annoIngresado > 2001 ){
         alert("Debes haber nacido antes del 2001 para poder registrar tus datos.");
     }
-
 }
 
 function validarRut ( nro, dv )
@@ -89,6 +88,21 @@ function validarNumeros(e){
 
     //Patrón de carácteres permitidos. Sólo letras + barra espaciadora.
     patron =/[0-9]/;
+    tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
+}
+
+//Función para Validar Números + Retroceso
+function validarDigito(e){
+    tecla = (document.all) ? e.keyCode : e.which;
+
+    //Permitimos tecla de retroceso.
+    if (tecla==8){
+        return true;
+    }
+
+    //Patrón de carácteres permitidos. Sólo letras + barra espaciadora.
+    patron =/[0-9kK]/;
     tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
 }
