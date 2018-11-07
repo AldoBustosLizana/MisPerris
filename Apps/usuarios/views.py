@@ -6,12 +6,13 @@ from .forms import RegistroForm
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render
 
-class index(request):
-    return render(request, 'usuario/login.html')
+
 
 class RegistroUsuario(CreateView):
     model = User
     template_name = "usuario/registrar.html"
     form_class = RegistroForm
 
+def index(request):
+    return render(request, 'usuario/login.html')
 

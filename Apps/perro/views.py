@@ -10,5 +10,5 @@ def index(request):
     return render(request, 'MisPerris/index.html')
 
 def contacto(request):
-    form = PostContacto()
+    form = PostContacto
     return render(request, 'MisPerris/contacto.html')

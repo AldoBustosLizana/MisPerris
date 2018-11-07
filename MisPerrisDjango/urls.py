@@ -5,7 +5,7 @@ from django.contrib.auth.views import LoginView
 from django.urls import path
 
 urlpatterns = [
-    path('^dmin/', admin.site.urls),
+    url('^admin/', admin.site.urls),
     path('',include('Apps.usuarios.urls')),
     path('accounts/',include('django.contrib.auth.urls')),
     url(r'^perro/', include ('Apps.perro.urls' )),

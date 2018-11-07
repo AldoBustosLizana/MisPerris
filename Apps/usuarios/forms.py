@@ -18,3 +18,4 @@ class RegistroForm(UserCreationForm):
             'last_name':'Apellidos',
             'email':'Correo',
         }
+

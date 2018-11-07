@@ -5,5 +5,5 @@ from django.urls import path
 
 urlpatterns = [
     url(r'^registrar',RegistroUsuario.as_view()),
-    path('',views.index, name='index'),
+    path('',views.index)
 ]
