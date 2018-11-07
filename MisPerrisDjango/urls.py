@@ -11,7 +11,7 @@ urlpatterns = [
     url(r'^perro/', include ('Apps.perro.urls' )),
     url(r'^usuario/',include('Apps.usuarios.urls')),
     url(r'^reset/password_reset',PasswordResetView, {'template_name':'registration/password_reset_form.html',
-    'email_template':'registration/password_reset_email.html'}),
+    'email_template_name':'registration/password_reset_email.html'}),
     url(r'^reset/password_reset_done',PasswordResetDoneView,{'template_name': 'registration/password_reset_done.html'}),
     url(r'^reset/(?P<uidba64>[0-9A-Za-z_\-]+)/(?P<token>.+)$', PasswordResetConfirmView,{'template_name':'registration/password_reset_confirm.html'}),
     url(r'^reset/done',PasswordResetCompleteView,{'template_name': 'registration/password_reset_complete.html'})
