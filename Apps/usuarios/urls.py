@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from apps.usuarios.views import RegistroUsuario
+from Apps.usuarios.views import RegistroUsuario
 
 
 urlpatterns = [
