@@ -7,6 +7,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^perro/', include ('Apps.perro.urls' )),
     url(r'^usuario/',include('Apps.usuarios.urls')),
-    url(r'^$',LoginView,{'template_name':'login.html'}, name="login")
+    url(r'^$',LoginView,{'template_name':'login.html'})
 ]
 
