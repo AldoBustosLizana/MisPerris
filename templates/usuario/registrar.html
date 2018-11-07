@@ -4,7 +4,7 @@
 
 {% load staticfiles %}
 {% block content %}
-<from method="post">
+<form method="post">
    {% csrf_token %}
     <div id="formulario">
 
@@ -38,13 +38,13 @@
             <tr>
                 <td class="columna1">Constraseña:</td>
                 <td class="columna2">
-                    <input type="text" id="Constraseña" maxlength="50"  ></td>
+                    <input type="password" id="Contraseña" maxlength="50"  ></td>
                 </td>
             </tr>
             <tr>
                 <td class="columna1">Confirmar Contraseña:</td>
                 <td class="columna2">
-                    <input type="text" id="Confimar Contraseña" maxlength="50"  ></td>
+                    <input type="password" id="Confirmar Contraseña" maxlength="50"  ></td>
                 </td>
             </tr>
             
@@ -56,7 +56,7 @@
         </table>
     </form>
 </div>
-</from>
+</form>
 
 
 {% endblock %}

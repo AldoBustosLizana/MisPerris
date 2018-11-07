@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Mis Perris - Usuario - Registro {% endblock %}
+{% block navbar %}
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+<form method="post">
+   {% csrf_token %}
+   <div id="formulario">
+
+    <form id="form1" name="form1" method="post" action="">
+        <table id="tablaFormulario">
+            <tr>
+                <td class="columna1">Nombre de Usuario:</td>
+                <td class="columna2">
+                    <input type="text" id="NombreUsuario" maxlength="50" required onkeypress="return validarLetrasConEspacio(event)"></td>
+            </tr>    
+            <tr>
+                <td class="columna1">Contraseña:</td>
+                <td class="columna2">
+                    <input type="password" id="Contraseña" maxlength="50"  ></td>
+                </td>
+            </tr>
+            <tr>
+                <td class="columna1"><a hrf="#">Confirmar Contraseña:</a></td>
+                <td class="columna2">
+                    <input type="submit" id="Olvide constraseña" value="Ingresar" maxlength="50"  ></td>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</form>
+
+
+{% endblock %}
