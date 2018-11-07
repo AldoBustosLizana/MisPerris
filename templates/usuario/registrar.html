@@ -1,6 +1,62 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Mis Perris - Usuario - Registro {% endblock %}
+
+{% load staticfiles %}
+{% block content %}
 <from method="post">
    {% csrf_token %}
-    <button type="submit">
-        Guardar
-    </button>
+    <div id="formulario">
+
+    <form id="form1" name="form1" method="post" action="">
+
+        <h3>Registro Usuario</h3>
+
+        <table id="tablaFormulario">
+            <tr id="rut">
+                <td class="columna1">Nombre:</td>
+                <td class="columna2">
+                    <input type="text" id="nombre" required maxlength="30" >-
+                </td>
+            </tr>
+            <tr>
+                <td class="columna1">Apellidos:</td>
+                <td class="columna2">
+                    <input type="text" id="apellidos" maxlength="30" required onkeypress="return validarLetrasConEspacio(event)"></td>
+            </tr>
+            <tr>
+                <td class="columna1">Nombre de Usuario:</td>
+                <td class="columna2">
+                    <input type="text" id="NombreUsuario" maxlength="50" required onkeypress="return validarLetrasConEspacio(event)"></td>
+            </tr>
+            
+            <tr>
+                <td class="columna1">Correo:</td>
+                <td class="columna2">
+                    <input type="email" id="correo" maxlength="50" required></td>
+            </tr>
+            <tr>
+                <td class="columna1">Constraseña:</td>
+                <td class="columna2">
+                    <input type="text" id="Constraseña" maxlength="50"  ></td>
+                </td>
+            </tr>
+            <tr>
+                <td class="columna1">Confirmar Contraseña:</td>
+                <td class="columna2">
+                    <input type="text" id="Confimar Contraseña" maxlength="50"  ></td>
+                </td>
+            </tr>
+            
+            <tr>
+                <td><button style="align-content: center" type="submit" class="save btn btn-default">Guardar</button></td>
+            </tr>
+        
+
+        </table>
+    </form>
+</div>
 </from>
+
+
+{% endblock %}
