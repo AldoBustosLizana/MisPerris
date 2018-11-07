@@ -32,7 +32,7 @@ nav a:hover{
 }
 
 a {
-    font-family: Calibri
+    font-family: Calibri;
         color: black;
 }
 
@@ -365,9 +365,9 @@ footer h3{
     }
 
     .franjaInferior{
-        background-color:;
+        background-color: #6dccaa;
         display: block;
-        vertical-align: center;
+        
         justify-content: space-between;
         font-family: Calibri, Verdana, monospace;
         color: white;

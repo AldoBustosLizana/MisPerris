@@ -1,2 +1,0 @@
-# MisPerris
-Página mis Perris

@@ -1,0 +1,79 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Mis Perris - Contacto{% endblock %}
+
+{% load staticfiles %}
+{% block content %}
+
+    <div id="formulario">
+
+        <form id="form1" name="form1" method="post" action="">
+
+            <h3>Formulario de Contacto</h3>
+
+            <table id="tablaFormulario">
+                <tr id="rut">
+                    <td class="columna1">R.U.N. :</td>
+                    <td class="columna2">
+                        <input type="text" id="rut" required maxlength="8" onkeypress="return validarNumeros(event)">-
+                        <input type="text" id="rut2" required maxlength="1" onkeypress="return validarDigito(event)" onblur="validarRut(rut, rut2)"></td>
+                </tr>
+                <tr>
+                    <td class="columna1">Nombre:</td>
+                    <td class="columna2">
+                        <input type="text" id="nombre" maxlength="30" required onkeypress="return validarLetrasConEspacio(event)"></td>
+                </tr>
+                <tr>
+                    <td class="columna1">Apellidos:</td>
+                    <td class="columna2">
+                        <input type="text" id="apellidos" maxlength="50" required onkeypress="return validarLetrasConEspacio(event)"></td>
+                </tr>
+                <tr>
+                    <td class="columna1">Fecha de Nacimiento:</td>
+                    <td class="columna2">
+                        <input type="date" id="fechaNacimiento" maxlength="50" required max="2001-12-31" value="2001-12-31" autocomplete="on" onblur="validarAnno(fechaNacimiento)"></td>
+                </tr>
+                <tr>
+                    <td class="columna1">Teléfono</td>
+                    <td class="columna2">
+                        <input type="text" id="telefono" maxlength="30" required onkeypress="return validarNumeros(event)" maxlength="9"></td>
+                </tr>
+                <tr>
+                    <td class="columna1">Correo:</td>
+                    <td class="columna2">
+                        <input type="email" id="correo" maxlength="50" required></td>
+                </tr>
+                <tr>
+                    <td class="columna1">Ciudad:</td>
+                    <td class="columna2">
+                    <select id="regiones"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna1">Comuna:</td>
+                    <td class="columna2">
+                    <select id="comunas"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="columna1">Tipo Vivienda:</td>
+                    <td class="columna2 opcionCasa">
+                    <select name="tipoCasa">
+                        <option value="tipoCasa0">Seleccione Tipo Casa</option>
+                        <option value="tipoCasa1">Casa patio Grande</option>
+                        <option value="tipoCasa2">Casa patio Pequeño</option>
+                        <option value="tipoCasa3">Casa sin patio</option>
+                        <option value="tipoCasa4">Departamento</option>
+                    </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button style="align-content: center" type="submit" class="save btn btn-default">Registrarse</button></td>
+                </tr>
+            
+
+            </table>
+        </form>
+    </div>
+
+{% endblock %}
