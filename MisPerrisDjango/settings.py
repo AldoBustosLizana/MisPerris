@@ -125,7 +125,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-LOGIN_REDIRECT_URL = reverse_lazy('apps.perro.urls')
+LOGIN_REDIRECT_URL = reverse_lazy('MisPerris/index.html')
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
