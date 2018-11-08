@@ -30,4 +30,5 @@ class RegistroPersona(forms.ModelForm):
             'apellidos' : forms.TextInput(attrs={'class':'form-control'}),
             'fechaNacimiento' : forms.TextInput(attrs={'class':'form-control'}),
             'telefono' : forms.TextInput(attrs={'class':'form-control'}),
+            'correo' : forms.TextInput(attrs={'class':'form-control'}),
         }
