@@ -17,8 +17,6 @@ urlpatterns = [
     path('reset/password_reset_done',PasswordResetDoneView,{'template_name': 'registration/password_reset_done.html'}),
     path('reset/(?P<uidba64>[0-9A-Za-z_\-]+)/(?P<token>.+)$', PasswordResetConfirmView,{'template_name':'registration/password_reset_confirm.html'}),
     path('reset/done',PasswordResetCompleteView,{'template_name': 'registration/password_reset_complete.html'}),
-]
-
     path('', include ('Apps.perro.urls')),
     path('', include ('Apps.adopcion.urls'))
 ]  
