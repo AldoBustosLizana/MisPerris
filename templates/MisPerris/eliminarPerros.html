@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Mis Perris - Registro Perros{% endblock %}
+
+{% load staticfiles %}
+
+{% block content %}
+    
+    <div id="formulario">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <h3>¿Desea Eliminar el registro de {{ perro.nombre }} ?</h3>
+            <hr>
+            <button class="btn btn-danger" type="submit">Si, Eliminar</button>
+            <a class="btn btn-default" href="{% url 'registroPerros' %}">Cancelar</a>
+        </form>
+    </div>
+
+{% endblock %}

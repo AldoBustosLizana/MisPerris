@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Mis Perris - Registro Perros{% endblock %}
+
+{% load staticfiles %}
+
+{% block content %}
+    
+    <div id="formulario">
+
+            <form id="form1" name="form1" method="post" action="" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h3>Registro de Perros en Adopción</h3>
+
+                <table id="formNuevoPerro">
+
+                    <tr>
+                        <td class="columna1">Nombre:</td>
+                        <td class="columna2"> {{ form.nombre }}</td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Raza:</td>
+                        <td class="columna2"> {{ form.raza }}</td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Descripción:</td>
+                        <td class="columna2"> {{ form.descripcion }}</td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Estado:</td>
+                        <td class="columna2"> {{ form.estado }} </td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Fotografía</td>
+                        <td class="columna2"> {{ form.fotografia }} </td>
+                    </tr>
+                   
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" class="save btn btn-default">Registrar Perro</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+{% endblock %}

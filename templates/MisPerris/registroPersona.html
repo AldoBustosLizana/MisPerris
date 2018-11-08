@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Mis Perris - Registro Persona{% endblock %}
+
+{% load staticfiles %}
+
+{% block content %}
+    
+    <div id="formulario">
+
+            <form id="form1" name="form1" method="post" action="" enctype="multipart/form-data">
+                {% csrf_token %}
+                <h3>Registro de Personas</h3>
+
+                <table id="formNuevaPersona">
+
+                    <tr>
+                        <td class="columna1">Rut:</td>
+                        <td class="columna2"> {{ form.rut }}</td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Nombre:</td>
+                        <td class="columna2"> {{ form.nombre }}</td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Apellidos:</td>
+                        <td class="columna2"> {{ form.apellidos }}</td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">FechaNacimiento:</td>
+                        <td class="columna2"> {{ form.fechaNacimiento }} </td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Teléfono</td>
+                        <td class="columna2"> {{ form.telefono }} </td>
+                    </tr>
+                   
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" class="save btn btn-default">Registrar Perro</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+{% endblock %}

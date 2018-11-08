@@ -8,6 +8,7 @@
 
     <!-- Estilo Css -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styleRegistro.css' %}">
 
     <!-- Otros estilos -->
     <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
@@ -38,9 +39,9 @@
             <nav id="menuDesplegable" class="opcionesEncabezados">
                 <ul>
                     <li><a href="{% url 'index' %}"><img src="{% static 'iconos/home.png' %}">INICIO</a></li>
-                    <li><a href="#"><img src="{% static 'iconos/grupo.png' %}">QUIENES SOMOS</a></li>
-                    <li><a href="#"><img src="{% static 'iconos/pata.png' %}">SERVICIOS</a></li>
-                    <li><a href="{% url  'contacto' %}"><img src="{% static 'iconos/buscagrupo.png' %}">CONTACTO</a></li>
+                    <li><a href="{% url 'nuevaPersona' %}"><img src="{% static 'iconos/grupo.png' %}">QUIENES SOMOS</a></li>
+                    <li><a href="{% url 'nuevoPerro' %}"><img src="{% static 'iconos/pata.png' %}">SERVICIOS</a></li>
+                    <li><a href="{% url 'contacto' %}"><img src="{% static 'iconos/buscagrupo.png' %}">CONTACTO</a></li>
                 </ul>
             </nav>
         </div>
