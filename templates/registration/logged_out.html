@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Mis Perris - Login {% endblock %}
+{% block navbar %}
+{% endblock %}
+{% load staticfiles %}
+{% block content %}
+
+<p>¡Desconectado!</p>  
+
+<a href="{% url 'login'%}">Haga clic aquí para iniciar sesión de nuevo.</a>
+{% endblock %}
