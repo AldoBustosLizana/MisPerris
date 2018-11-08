@@ -9,7 +9,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< HEAD
     path('registration/password_reset_form.html', PasswordResetView, name='resetForm'),
     path('accounts/',include('django.contrib.auth.urls')),
     path('perro/', include ('Apps.perro.urls' )),
@@ -20,10 +19,8 @@ urlpatterns = [
     path('reset/done',PasswordResetCompleteView,{'template_name': 'registration/password_reset_complete.html'}),
 ]
 
-=======
     path('', include ('Apps.perro.urls')),
     path('', include ('Apps.adopcion.urls'))
 ]  
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
->>>>>>> 5f4f7e0a6e979351cb39bd3514af941eb98a7bb2
