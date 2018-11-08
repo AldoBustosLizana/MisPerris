@@ -1,6 +1,5 @@
 from django.db import models
 
-
 # Create your models here.
 class Persona(models.Model):
     rut = models.CharField(max_length = 8, primary_key = True)
@@ -11,4 +10,3 @@ class Persona(models.Model):
     telefono = models.IntegerField()
     domicilio = models.CharField(max_length = 50)
     mail = models.CharField(max_length = 100)
-

@@ -4,7 +4,6 @@ from django.utils import timezone
 from Apps.adopcion.models import Persona
 
 # Create your models here.
-
 class Perro(models.Model):
 	nombre = models.CharField(max_length = 50)
 	raza = models.CharField(max_length = 30)
