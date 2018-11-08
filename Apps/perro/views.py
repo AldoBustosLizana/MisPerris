@@ -12,3 +12,9 @@ def index(request):
 def contacto(request):
     form = PostContacto
     return render(request, 'MisPerris/contacto.html')
+
+def index_login(request):
+    return render(request,'registration/login.html')
+
+def index_logged_out(request):
+    return render(request, 'registration/logged_out.html')

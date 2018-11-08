@@ -6,12 +6,9 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('Apps.usuarios.urls')),
     path('registration/password_reset_form.html', PasswordResetView, name='resetForm'),
-
     path('accounts/',include('django.contrib.auth.urls')),
     path('perro/', include ('Apps.perro.urls' )),
-    path('usuario/',include('Apps.usuarios.urls')),
     path('reset/password_reset',PasswordResetView, {'template_name':'registration/password_reset_form.html',
     'email_template_name':'registration/password_reset_email.html'}),
     path('reset/password_reset_done',PasswordResetDoneView,{'template_name': 'registration/password_reset_done.html'}),

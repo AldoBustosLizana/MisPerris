@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Apps.adopcion',
     'Apps.perro',
-    'Apps.usuarios',
+  
 ]
 
 MIDDLEWARE = [
@@ -59,7 +59,7 @@ ROOT_URLCONF = 'MisPerrisDjango.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, './templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,11 +125,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-LOGIN_REDIRECT_URL = reverse_lazy('MisPerris/index.html')
+LOGIN_REDIRECT_URL = 'index'
 
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = 'Lit.Aeternum@gmail.com'
-EMAIL_HOST_PASSWORD = 'Litaeternum2018'
+EMAIL_HOST_USER = 'carolinaAceitunoR@gmail.com'
+EMAIL_HOST_PASSWORD = 'gregusm17611761'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
