@@ -1,0 +1,46 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Mis Perris - Lista Personas{% endblock %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<div id="formulario">
+
+        <table id="listaPerros">
+        <thead>
+            <tr>
+                <td>RUT</td>
+                <td>Nombre</td>
+                <td>Apellidos</td>
+                <td>Fecha Nacimiento</td>
+                <td>Teléfono</td>
+                <td>Acciones</td>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            {% if adopcion %}
+            {% for adopcion in adopcion %}
+            <tr>
+                <td>{{ adopcion.rut }}</td>
+                <td>{{ adopcion.nombre }}</td>
+                <td>{{ adopcion.apellidos }}</td>
+                <td>{{ adopcion.fechaNacimiento }}</td>
+                <td>{{ adopcion.telefono }}</td>
+                <td>
+                    <a class="btn btn-primary" href="{% url 'editarPersonas' adopcion.id %}">Editar</a>
+                    <a class="btn btn-primary" href="{% url 'eliminarPersonas' adopcion.id %}">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+            {% else %}
+            <h1>No hay Registros</h1>
+            {% endif %}
+        </tbody>
+        
+    </table>
+
+{% endblock %}
