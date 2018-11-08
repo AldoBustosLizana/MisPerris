@@ -9,7 +9,6 @@ def index(request):
     return render(request, 'MisPerris/index.html')
 
 def contacto(request):
-<<<<<<< HEAD
     form = PostContacto
     return render(request, 'MisPerris/contacto.html')
 
@@ -18,7 +17,6 @@ def index_login(request):
 
 def index_logged_out(request):
     return render(request, 'registration/logged_out.html')
-=======
     return render(request, 'MisPerris/contacto.html')
 
 def lista_Perros(request):
@@ -55,4 +53,3 @@ def eliminar_Perros(request, id_perro):
         perro.delete()
         return redirect('registroPerros')
     return render(request, 'MisPerris/eliminarPerros.html', {'perro':perro})
->>>>>>> 5f4f7e0a6e979351cb39bd3514af941eb98a7bb2
