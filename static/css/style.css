@@ -5,15 +5,24 @@
 	box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    background: black;
-}
-
-
 .main {
     background: #bbbbbb;
+    min-height: 100%;
 }
+
+#formulario2 {
+    width: 100%;
+    min-height: 100%;
+    background: white;
+    max-width: 850px;
+    margin: 0 auto;
+    padding:10%;
+    padding-bottom: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+
 
 /* Encabezado */
 .header {
@@ -26,13 +35,13 @@ body {
 }
 
 nav a:hover{
-     background: #89ECD1;
+    background: #89ECD1;
     border-radius: 50px;
 }
 
 a {
     font-family: Calibri;
-        color: black;
+    color: black;
 }
 
 .Contenido {

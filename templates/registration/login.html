@@ -5,41 +5,38 @@
 {% endblock %}
 {% load staticfiles %}
 {% block content %}
-<form method="post">
-   {% csrf_token %}
-   {% if form.errors %}
-   <p>Tu nombre de usuario y contraseña no coinciden. Inténtalo de nuevo.</p>
-   {% endif %}
-   
-   {% if next %}
-       {% if user.is_authenticated %}
-       <p>Tu cuenta no tiene acceso a esta página. Para proceder,
-        Por favor inicie sesión con una cuenta que tenga acceso.</p>
-       {% else %}
-       <p>Por favor inicie sesión para ver esta página.</p>
-       {% endif %}
-   {% endif %}
-   
-   <form method="post" action="{% url 'login' %}">
-   {% csrf_token %}
-   
-    <div>
-      <td>{{ form.username.label_tag }}</td>
-      <td>{{ form.username }}</td>
-    </div>
-    <div>
-     <td>{{ form.password.label_tag }}</td>
-     <td>{{ form.password }}</td>
-    </div>
-   
-    <div>
-      <input type="submit" value="Entrar" />
-      <input type="hidden" name="next" value="{{ next }}" />
-    </div>
-  
-   </form>
-   
-   {# Assumes you setup the password_reset view in your URLconf #}
-   <p><a href="{% url 'password_reset' %}">¿Olvido su contraeña?</a></p>
+
+<div id="formulario2" class="define">
+        
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}  
+            <h3>Iniciar Sesión</h3>
+
+            <table id="formNuevoPerro">
+                
+                <tr>
+                    <td class="loginIzq">{{ form.username.label_tag }}</td>
+                    <td class="loginDer">{{ form.username }}</td>
+                </tr>
+                  
+                <tr>
+                    <td class="loginIzq">{{ form.password.label_tag }}</td>
+                    <td class="loginDer">{{ form.password }}</td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2" class="loginCentro"><input type="submit" value="Iniciar Sesión" /></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2" class="loginCentro2">
+                        <a href="{% url 'password_reset' %}">¿Olvido su contraseña?</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+      </div>
+      
+
    
 {% endblock %}

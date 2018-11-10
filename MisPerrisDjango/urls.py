@@ -10,7 +10,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('registration/password_reset_form.html', PasswordResetView, name='resetForm'),
-    path('accounts/',include('django.contrib.auth.urls')),
+    path('accounts/',include('django.contrib.auth.urls'), name='index'),
     path('perro/', include ('Apps.perro.urls' )),
     path('reset/password_reset',PasswordResetView, {'template_name':'registration/password_reset_form.html',
     'email_template_name':'registration/password_reset_email.html'}),
