@@ -5,6 +5,7 @@
 {% endblock %}
 {% load staticfiles %}
 {% block content %}
+<div class="contenido">
 <form method="post">
    {% csrf_token %}
    {% if form.errors %}
@@ -41,5 +42,5 @@
    
    {# Assumes you setup the password_reset view in your URLconf #}
    <p><a href="{% url 'password_reset' %}">¿Olvido su contraeña?</a></p>
-   
+  </div>
 {% endblock %}
