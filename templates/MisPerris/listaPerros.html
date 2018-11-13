@@ -6,44 +6,46 @@
 
 {% block content %}
 
-<div id="formulario">
-
-        <table id="listaPerros">
-        <thead>
-
-            <tr>
-                <td>#</td>
-                <td>Nombre</td>
-                <td>Raza</td>
-                <td>Descripcion</td>
-                <td>Fotografia</td>
-                <td>Acciones</td>
-            </tr>
-
-        </thead>
-
-        <tbody>
-            {% if perro %}
-            {% for perro in perro%}
-            <tr>
-                <td>{{ perro.id }}</td>
-                <td>{{ perro.nombre }}</td>
-                <td>{{ perro.raza }}</td>
-                <td>{{ perro.descripcion }}</td>
-                <td id="foto">
-                       <img src="{{ perro.fotografia }}">
-                    </td>
-                <td>
-                    <a class="btn btn-primary" href="{% url 'editarPerros' perro.id %}">Editar</a>
-                    <a class="btn btn-primary" href="{% url 'eliminarPerros' perro.id %}">Eliminar</a>
-                </td>
-            </tr>
-            {% endfor %}
-            {% else %}
-            <h1>No hay Registros</h1>
-            {% endif %}
-        </tbody>
+<div id="formulario3" class="define">
         
-    </table>
+        <table id="listaPerros">
+            
+            <thead class="nuevo">
+                
+                <tr>
+                    <td>#</td>
+                    <td>Nombre</td>
+                    <td>Raza</td>
+                    <td>Descipción</td>
+                    <td>Fotografía</td>
+                    <td>Acciones</td>
+                </tr>
+            
+            </thead>
+            
+            <tbody>
+                {% if perro %}
+                {% for perro in perro %}
+                <tr>
+                    <td>{{ perro.id }}</td>
+                    <td>{{ perro.nombre }}</td>
+                    <td>{{ perro.raza }}</td>
+                    <td>{{ perro.descripcion }}</td>
+                    <td id="foto">
+                        <img src="{{ perro.fotografia.url }}"></td>
+                    <td id="acciones">
+                        <a class="btn btn-primary" href="{% url 'editarPerros' perro.id %}">Editar</a>
+                        <a class="btn btn-primary" href="{% url 'eliminarPerros' perro.id %}">Eliminar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <h1>No hay Registros</h1>
+                {% endif %}
+            </tbody>
+        
+        </table>
+    
+    </div>
 
 {% endblock %}

@@ -9,7 +9,12 @@ def index(request):
     return render(request, 'MisPerris/index.html')
 
 def contacto(request):
+<<<<<<< HEAD
     
+=======
+
+    form = PostContacto
+>>>>>>> 2b258fb83e838474bf407f6c884c9a898e65f387
     return render(request, 'MisPerris/contacto.html')
 
 def index_login(request):
@@ -17,7 +22,11 @@ def index_login(request):
 
 def index_logged_out(request):
     return render(request, 'registration/logged_out.html')
+<<<<<<< HEAD
     
+=======
+    return render(request, 'MisPerris/contacto.html')
+>>>>>>> 2b258fb83e838474bf407f6c884c9a898e65f387
 
 def lista_Perros(request):
     if request.method == 'POST':
@@ -52,4 +61,8 @@ def eliminar_Perros(request, id_perro):
     if request.method == "POST":
         perro.delete()
         return redirect('registroPerros')
+<<<<<<< HEAD
     return render(request, 'MisPerris/eliminarPerros.html', {'perro':perro})
+=======
+    return render(request, 'MisPerris/eliminarPerros.html', {'perro':perro})
+>>>>>>> 2b258fb83e838474bf407f6c884c9a898e65f387

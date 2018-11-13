@@ -6,15 +6,20 @@
 
 {% block content %}
     
-    <div id="formulario">
+<div id="formulario2" class="define">
+        
         <form method="POST">
             {% csrf_token %}
-            {{form.as_p}}
-            <h3>¿Desea Eliminar el registro de {{ perro.nombre }} ?</h3>
-            <hr>
-            <button class="btn btn-danger" type="submit">Si, Eliminar</button>
-            <a class="btn btn-default" href="{% url 'registroPerros' %}">Cancelar</a>
+            
+            <div class="define" id="mensajes">
+                <h3>¿Desea Eliminar el registro de {{ perro.nombre }} ?</h3>
+                <hr>
+                <img id="fotoEliminado" src="{{ perro.fotografia.url }}">
+                <hr>
+                <button class="btnOK" type="submit">Si, Eliminar</button>
+            </div>
         </form>
+        <a class="btnNO" href="{% url 'registroPerros' %}">Cancelar</button>
     </div>
 
 {% endblock %}

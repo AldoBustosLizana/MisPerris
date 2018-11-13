@@ -1,41 +1,189 @@
-#formNuevoPerro{
+#inicioSesion {
     font-family: Calibri, Verdana;
     font-size: 18px;
-    width: 80%;
+    width: 100%;
     height: 100%;
     align-items: center;
     background: gray;
-    border-radius: 30px;
-    margin-top: 40px;
+    border-radius: 20px;
 }
 
-#formNuevaPersona{
+.loginIzq {
+    padding-top: 40px;
+    font-family: sans-serif;
+    text-align: right;
+    padding-left: 30px;
+}
+
+.loginDer {
+    padding-top: 40px;
+    font-family: sans-serif;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.loginCentro {
+    padding-top: 20px;
+    height: 20%;
+}
+
+.loginCentro input{
+    background: #85d4b7;
+    width: 60%;
+    border-radius: 20px;
+}
+
+.loginCentro2 a{
+    font-family: cursive;
+}
+
+
+
+#inicioSesion {
     font-family: Calibri, Verdana;
     font-size: 18px;
-    width: 80%;
+    width: 100%;
     height: 100%;
     align-items: center;
     background: gray;
-    border-radius: 30px;
-    margin-top: 40px;
+    border-radius: 20px;
 }
 
-#listaPerros{
-    font-family: Calibri, Verdana;
-    font-size: 18px;
-    width: 80%;
-    align-items: center;
+#formulario2 {
     background: white;
+    position: fixed;
+    max-width: 850px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
 }
 
-#listaPerros td{
-    padding: 15px;
-    border: 2px solid;
+#elbody {
+    background: gray;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#formulario3 {
+    background: white;
+    margin-top: 50px;
+    position: fixed;
+    max-width: 850px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#formNuevoPerro{
+    background: gray;
+    margin-top: 5%;
+    width: 100%;
+    height: 350px;
+    padding: 10%;
+    font-family: Calibri, Verdana;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+#listaPerros {
+    padding: 10%;
+    margin-top: 8%;
+    width: 80%;
+    height: auto;
+    background: gray;
+    font-size: 15px;
+    font-family: Calibri, Verdana;
+    font-weight: bold;
 }
 
 #listaPerros thead {
     background: #85d4b7;
     text-align: center;
-    font-family: monospace;
-    font-size: 15px;
+}
+
+#listaPerros td{
+    padding: 10px;
+    border: 3px solid;
+}
+
+#acciones {
+    text-align: center;
+}
+
+#acciones .btn {
+    background: #85d4b7;
+    border-color: black;
+    color: black;
+    width: 90%;
+    border-radius: 12px;
+}
+
+#foto {
+    text-align: center;
+}
+
+#foto img {
+    max-height: 100px;
+    max-width: 200px;
+}
+
+.nuevoIzq {
+    width: 35%;
+    text-align: right;
+}
+
+.nuevoDer {
+    width: 70%;
+    text-align: center;
+}
+
+.nuevoDer input {
+    background: white;
+    width: 70%;
+}
+
+.nuevoBoton {
+    height: 20%;
+}
+
+.nuevoBoton button {
+    background: #85d4b7;
+    border-color: black;
+    color: black;
+    width: 30%;
+    border-radius: 12px;
+}
+
+#formulario2 h3 {
+    font-family: Calibri, Verdana;
+    font-weight: bold;
+}
+
+#fotoEliminado{
+    max-width: 500px;
+    max-height: 300px;
+    height: auto;
+    width: auto;
+    text-align: center;
+}
+
+
+.btnOK {
+    background: #FF2E2E;
+    border-color: black;
+    color: WHITE;
+    width: 20%;
+    height: 35px;
+    border-radius: 10px;
+}
+
+.btnNO {
+    background: azure;
+    border-color: black;
+    color: black;
+    width: 20%;
+    height: 35px;
+    border-radius: 10px;
 }

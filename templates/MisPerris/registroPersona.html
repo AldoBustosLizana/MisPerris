@@ -6,13 +6,13 @@
 
 {% block content %}
     
-    <div id="formulario">
+    <div id="formulario2" class="define">
 
-            <form id="form1" name="form1" method="post" action="" enctype="multipart/form-data">
+            <form method="post" action="" enctype="multipart/form-data">
                 {% csrf_token %}
-                <h3>Registro de Personas</h3>
+                <h3>Contacto</h3>
 
-                <table id="formNuevaPersona">
+                <table id="formNuevoPerro">
 
                     <tr>
                         <td class="columna1">Rut:</td>
@@ -33,6 +33,10 @@
                     <tr>
                         <td class="columna1">Teléfono</td>
                         <td class="columna2"> {{ form.telefono }} </td>
+                    </tr>
+                    <tr>
+                        <td class="columna1">Correo</td>
+                        <td class="columna2"> {{ form.correo }} </td>
                     </tr>
                    
                     <tr>
