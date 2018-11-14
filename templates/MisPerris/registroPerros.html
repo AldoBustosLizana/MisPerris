@@ -7,43 +7,45 @@
 {% block content %}
     
 <div id="formulario2" class="define">
-        
-        <form method="post" action="" enctype="multipart/form-data">
+    
+    <form method="post" action="" enctype="multipart/form-data">
 
-            {% csrf_token %}
-            <h3>Registrar Perro en Adopción</h3>
+    {% csrf_token %}
+    <h3>Registrar Perro en Adopción</h3>
 
-            <table id="formNuevoPerro">
-                          
-                  <tr>
-                      <td class="nuevoIzq">{{ form.nombre.label_tag }} </td>
-                      <td class="nuevoDer">{{ form.nombre }} </td>
-                  </tr>
+    <table id="formNuevoPerro">
+        <tr>
+            <td class="nuevoIzq">{{ form.nombre.label_tag }} </td>
+            <td class="nuevoDer">{{ form.nombre }} </td>
+        </tr>
                   
-                  <tr>
-                      <td class="nuevoIzq">{{ form.raza.label_tag }} </td>
-                      <td class="nuevoDer">{{ form.raza }} </td>
-                  </tr>
-              <tr>
-                  <td class="nuevoIzq">{{ form.descripcion.label_tag }} </td>
-                      <td class="nuevoDer">{{ form.descripcion }} </td>
-              </tr>
-                  
-                  <tr>
-              <td class="nuevoIzq">{{ form.estado.label_tag }} </td>
-                      <td class="nuevoDer">{{ form.estado }} </td>
-                      </tr>
-              <tr>
-              <td class="nuevoIzq">{{ form.fotografia.label_tag }} </td>
-                      <td class="nuevoDer">{{ form.fotografia }} </td>
-              </tr>
-                  <tr>
-                        <td class="nuevoBoton" colspan="2">
-                            <button type="submit" class="save btn btn-default">Registrar Perro</button>
-                        </td>
-                    </tr>
+        <tr>
+            <td class="nuevoIzq">{{ form.raza.label_tag }} </td>
+            <td class="nuevoDer">{{ form.raza }} </td>
+        </tr>
               
-              </table>
+        <tr>
+            <td class="nuevoIzq">{{ form.descripcion.label_tag }} </td>
+            <td class="nuevoDer">{{ form.descripcion }} </td>
+        </tr>
+                  
+        <tr>
+            <td class="nuevoIzq">{{ form.estado.label_tag }} </td>
+            <td class="nuevoDer">{{ form.estado }} </td>
+        </tr>
+              
+        <tr>              
+            <td class="nuevoIzq">{{ form.fotografia.label_tag }} </td>
+            <td class="nuevoDer">{{ form.fotografia }} </td>
+        </tr>
+        
+        <tr>
+            <td class="nuevoBoton" colspan="2">
+                <button type="submit" class="save btn btn-default">Registrar Perro</button>
+            </td>
+        </tr>
+    
+    </table>
             </form>
               
       </div>

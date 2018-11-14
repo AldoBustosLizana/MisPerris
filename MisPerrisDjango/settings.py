@@ -125,12 +125,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-<<<<<<< HEAD
 
 LOGIN_REDIRECT_URL = 'index'
 
-=======
->>>>>>> 2b258fb83e838474bf407f6c884c9a898e65f387
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 25
@@ -138,10 +135,8 @@ EMAIL_HOST_USER = 'prueba.correo1888@gmail.com'
 EMAIL_HOST_PASSWORD = 'linkinpark1999'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 MEDIA_URL = '/media/'
-<<<<<<< HEAD
+
 MEDIA_ROOT = (os.path.join(BASE_DIR, 'media'),)
-=======
 MEDIA_ROOT = 'media/photos'
 
 LOGIN_REDIRECT_URL = 'home'
->>>>>>> 2b258fb83e838474bf407f6c884c9a898e65f387

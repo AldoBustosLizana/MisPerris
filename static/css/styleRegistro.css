@@ -139,6 +139,11 @@
     text-align: center;
 }
 
+.nuevoDer .nrut {
+    width: 10px;
+
+}
+
 .nuevoDer input {
     background: white;
     width: 70%;
