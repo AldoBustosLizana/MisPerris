@@ -10,33 +10,33 @@
 
             <form method="post" action="" enctype="multipart/form-data">
                 {% csrf_token %}
-                <h3>Contacto</h3>
+                <h3>Formulario de Contacto</h3>
 
                 <table id="formNuevoPerro">
 
                     <tr>
-                        <td class="columna1">Rut:</td>
-                        <td class="columna2"> {{ form.rut }}</td>
+                        <td class="nuevoIzq">{{ form.rut.label_tag }}</td>
+                        <td class="nuevoDer"> {{ form.rut }} {{ form.dv}}</td>
                     </tr>
                     <tr>
-                        <td class="columna1">Nombre:</td>
-                        <td class="columna2"> {{ form.nombre }}</td>
+                        <td class="nuevoIzq">{{form.nombre.label_tag}}</td>
+                        <td class="nuevoDer"> {{ form.nombre }}</td>
                     </tr>
                     <tr>
-                        <td class="columna1">Apellidos:</td>
-                        <td class="columna2"> {{ form.apellidos }}</td>
+                        <td class="nuevoIzq">{{form.apellidos.label_tag}}</td>
+                        <td class="nuevoDer"> {{ form.apellidos }}</td>
                     </tr>
                     <tr>
-                        <td class="columna1">FechaNacimiento:</td>
-                        <td class="columna2"> {{ form.fechaNacimiento }} </td>
+                        <td class="nuevoIzq">{{form.fechaNacimiento.label_tag}}</td>
+                        <td class="nuevoDer"> {{ form.fechaNacimiento }} </td>
                     </tr>
                     <tr>
-                        <td class="columna1">Teléfono</td>
-                        <td class="columna2"> {{ form.telefono }} </td>
+                        <td class="nuevoIzq">{{form.telefono.label_tag}}</td>
+                        <td class="nuevoDer"> {{ form.telefono }} </td>
                     </tr>
                     <tr>
-                        <td class="columna1">Correo</td>
-                        <td class="columna2"> {{ form.correo }} </td>
+                        <td class="nuevoIzq">{{form.correo.label_tag}}</td>
+                        <td class="nuevoDer"> {{ form.correo }} </td>
                     </tr>
                    
                     <tr>

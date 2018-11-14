@@ -8,6 +8,7 @@ class RegistroPersona(forms.ModelForm):
         
         fields = [
             'rut',
+            'dv',
             'nombre',
             'apellidos',
             'fechaNacimiento',
@@ -17,6 +18,7 @@ class RegistroPersona(forms.ModelForm):
 
         labels = {
             'rut' : 'Rut',
+            'dv' : 'Dv',
             'nombre' : 'Nombre',
             'apellidos' : 'Apellidos',
             'fechaNacimiento' : 'FechaNacimiento',
@@ -25,10 +27,11 @@ class RegistroPersona(forms.ModelForm):
         }
         
         widgets = {
-            'rut' : forms.TextInput(attrs={'class':'form-control'}),
-            'nombre' : forms.TextInput(attrs={'class':'form-control'}),
-            'apellidos' : forms.TextInput(attrs={'class':'form-control'}),
-            'fechaNacimiento' : forms.TextInput(attrs={'class':'form-control'}),
-            'telefono' : forms.TextInput(attrs={'class':'form-control'}),
+            'rut' : forms.TextInput(attrs={'placeholder':'Ej. 18516163', 'onkeypress':'return validarNumeros(event)', 'class':'form-control'}),
+            'dv' : forms.TextInput(attrs={'onblur':'validarRut(rut, dv)', 'onkeypress':'return validarDigito(event)', 'class':'form-control'}),
+            'nombre' : forms.TextInput(attrs={'onkeypress':'return validarLetrasConEspacio(event)', 'class':'form-control'}),
+            'apellidos' : forms.TextInput(attrs={'onkeypress':'return validarLetrasConEspacio(event)', 'class':'form-control'}),
+            'fechaNacimiento' : forms.TextInput(attrs={'max':'2001-12-31','value':'2001-12-31','autocomplete':'on', 'onblur':'validarAnno(fechaNacimiento)','class':'form-control'}),
+            'telefono' : forms.TextInput(attrs={'onkeypress':'return validarNumeros(event)', 'class':'form-control'}),
             'correo' : forms.TextInput(attrs={'class':'form-control'}),
         }
